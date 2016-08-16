@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Tenor House">
+    <meta name="author" content="Nick Bertoldi">
+    <title>Tenor House</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Color Wheel-->
+    <link href="thirdparty/farbtastic/farbtastic.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500i" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="slider.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"> </head>
+
+<body id="grad" role="document">
+    <!-- Fixed navbar -->
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container" id="nav-container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" target="#navbar-container"> <span class="sr-only">Show and Hide Navigation Menu</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand logo-icon"> <img src="img/BertoldiSign.png"> </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="navbar-container">
+                    <ul class="nav navbar-nav">
+                        <li class="active"> <a href="#">Home</a> </li>
+                        <li> <a href="#">About</a> </li>
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-question-sign"></span> Contact Us <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-phone"></span> Phone</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-comment"></span> Email</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Mail</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-map-marker"></span> Driving Directions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <form action="gpio.php">
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Step 1: <br class="visible-xs"><small>Select a Color</small></h1> </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                        <div id="color-picker">
+                            <div id="color-wheel"> </div>
+                            <form style="padding: 5px 0px; padding-left: 20px">
+                                <input type="text" id="color-bind" name="color-bind" value="#123456" /> </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-1" style="vertical-align:middle; display:inline-block">
+                        <table style="width:100%">
+                            <tr>
+                                <th>R:</th>
+                                <td class="text-right">18</td>
+                            </tr>
+                            <tr>
+                                <th>G:</th>
+                                <td class="text-right">52</td>
+                            </tr>
+                            <tr>
+                                <th>B:</th>
+                                <td class="text-right">86</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-1 col-md-2">
+                        <div class="thumbnail" id="display-thumbnail">
+                            <div class="square color-bind"> </div>
+                            <h3 class="text-center">#123456</h3>
+                            <button class="btn-success center-block">Add Color</button>
+                        </div>
+                    </div>
+                    <div class="col-xs-2 col-xs-offset-2 col-sm-1 col-sm-offset-1">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit"> </div>
+                    <div class="col-xs-2 col-sm-1">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit"> </div>
+                    <div class="col-xs-2 col-sm-1">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit"> </div>
+                    <div class="col-xs-2 col-sm-1">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit">
+                        <div class="thumbnail">
+                            <div class="square"> </div>
+                        </div>
+                        <input type="text" class="color-submit"> </div>
+                    <div class="col-xs-2 col-sm-1"> </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Step 2: <br class="visible-xs"><small>Select an Effect</small></h1> </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item color-bind">Solid </button>
+                                <!--
+                                <button type="button" class="list-group-item">Effect 2 </button>
+                                <button type="button" class="list-group-item">Effect 3 </button>
+                                <button type="button" class="list-group-item">Effect 4 </button>
+                                <button type="button" class="list-group-item">Effect 5 </button>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Step 3: <br class="visible-xs"><small>Select a Speed</small></h1> </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="range-slider">
+                            <input class="range-slider__range" id="speed-range" type="range" name="speed" max="10" min="0" step="0.1">
+                            <input id="speed-text" type="text" name="speed-text" value=5 class="range-slider__value color-bind"> </div>
+                    </div>
+                    <div class="col-xs-4 col-xs-offset-4 col-sm-3 col-sm-offset-3">
+                        <input id="submit" type="submit" class="color-bind btn-lg" disabled="disabled"> </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="thirdparty/farbtastic/farbtastic.js"></script>
+    <script src="slider.js"></script>
+    <script src="js/gpio.js"></script>
+</body>
+
+</html>
